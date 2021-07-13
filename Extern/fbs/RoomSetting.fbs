@@ -1,0 +1,10 @@
+namespace db.Packet;
+
+table RoomSetting
+{
+    session_id:int;
+    roomid:int;
+    userid:string;
+    roomname:string;
+}
+root_type RoomSetting;

@@ -1,0 +1,11 @@
+include "hosPacketData.fbs";
+namespace hos.Packet;
+
+table PositionProtocol
+{
+    id:int;
+    position:Vec3;
+    rotation:Vec3;
+    active:bool;
+}
+root_type PositionProtocol;

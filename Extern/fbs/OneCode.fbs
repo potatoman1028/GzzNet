@@ -1,0 +1,7 @@
+namespace db.Packet;
+
+table OneCode
+{
+    code:int;
+}
+root_type OneCode;

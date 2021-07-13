@@ -1,0 +1,15 @@
+include "hosPacketData.fbs";
+namespace hos.Packet;
+
+table GroupData
+{
+    number:int;
+    name:string;
+}
+
+table GropuListProtocol
+{
+    list:[GroupData];
+}
+
+root_type GropuListProtocol;

@@ -1,0 +1,8 @@
+include "hosPositionPacket.fbs";
+namespace hos.Packet;
+
+table PositionListProtocol
+{
+    Positions:[PositionProtocol];
+}
+root_type PositionListProtocol;

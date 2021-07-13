@@ -1,0 +1,9 @@
+namespace Packet;
+
+table Echo
+{
+    time:int64;
+    seq:int;
+    data:string;
+}
+root_type Echo;

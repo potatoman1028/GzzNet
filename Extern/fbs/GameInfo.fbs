@@ -1,0 +1,10 @@
+namespace db.Packet;
+
+table GameInfo
+{
+    session_id:int;
+    userid:string;
+    myscore:int;
+    bestscore:int;
+}
+root_type GameInfo;

@@ -1,0 +1,9 @@
+include "hosData.fbs";
+namespace hos.Data;
+table Transform
+{
+    position:Vec3;
+    rotation:Vec3;
+    scale:Vec3;
+}
+root_type Transform;

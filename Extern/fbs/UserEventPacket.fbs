@@ -1,0 +1,12 @@
+include "hosPacketData.fbs";
+namespace hos.Packet;
+
+table UserEventProtocol
+{
+    id:uint;
+    name:string;
+    certification:bool;
+    event:uint;
+    resuilt:uint;
+}
+root_type UserEventProtocol;

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="DBA">
+      <UniqueIdentifier>{3894743c-aa6c-4c71-bca9-f800258aaba9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EntryPoint">
+      <UniqueIdentifier>{c57fa0a6-22a9-4ddf-bb6c-7158b77b6f2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{ce7d4839-44d7-4f92-b905-7d12c6910d41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Table">
+      <UniqueIdentifier>{5d39c582-7405-41c6-88c6-70f642aced55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NetToken">
+      <UniqueIdentifier>{637eceb1-3109-44f1-8569-d46dce0fbf26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Table\dummy">
+      <UniqueIdentifier>{65ce37a4-df89-40a1-8518-19aec439b375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NetToken\Game">
+      <UniqueIdentifier>{fcd66547-0724-482e-9a57-bbfc05d54ecd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NetToken\Login">
+      <UniqueIdentifier>{365529ce-33c4-4ade-88b1-36f97791a433}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DBAgent.cpp">
+      <Filter>DBA</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>EntryPoint</Filter>
+    </ClCompile>
+    <ClCompile Include="Login.cpp">
+      <Filter>NetToken\Login</Filter>
+    </ClCompile>
+    <ClCompile Include="IToken.cpp">
+      <Filter>NetToken</Filter>
+    </ClCompile>
+    <ClCompile Include="Querys.cpp">
+      <Filter>Table\dummy</Filter>
+    </ClCompile>
+    <ClCompile Include="Tables.cpp">
+      <Filter>Table</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>NetToken\Game</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DBAgent.h">
+      <Filter>DBA</Filter>
+    </ClInclude>
+    <ClInclude Include="AgentDefine.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="Login.h">
+      <Filter>NetToken\Login</Filter>
+    </ClInclude>
+    <ClInclude Include="IToken.h">
+      <Filter>NetToken</Filter>
+    </ClInclude>
+    <ClInclude Include="Querys.h">
+      <Filter>Table\dummy</Filter>
+    </ClInclude>
+    <ClInclude Include="Tables.h">
+      <Filter>Table</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>NetToken\Game</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

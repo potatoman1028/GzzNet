@@ -1,0 +1,10 @@
+include "hosPacketData.fbs";
+namespace hos.Packet;
+
+table BaseProtocol
+{
+    id:uint;
+    event:uint;
+    return:uint;
+}
+root_type BaseProtocol;

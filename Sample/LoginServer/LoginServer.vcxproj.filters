@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="common">
+      <UniqueIdentifier>{9d1239bb-3acb-47f8-a3c2-f13cca82d324}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EntryPoint">
+      <UniqueIdentifier>{7e60f71d-45a6-4053-8cee-b1288b463bfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NetToken">
+      <UniqueIdentifier>{4c4bd7a9-3c7d-4427-96d5-3b1eb35bddfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NetToken\Customer">
+      <UniqueIdentifier>{3719fc13-975b-4e13-bcae-6c7302604441}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NetToken\DB_Connection">
+      <UniqueIdentifier>{ca5eacca-bf59-4354-8a33-d16ea94facd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Login">
+      <UniqueIdentifier>{84d41201-92e6-4ebb-a9a8-1af338fe7935}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LoginServer.h">
+      <Filter>Login</Filter>
+    </ClInclude>
+    <ClInclude Include="Customer.h">
+      <Filter>NetToken\Customer</Filter>
+    </ClInclude>
+    <ClInclude Include="DB_Connection.h">
+      <Filter>NetToken\DB_Connection</Filter>
+    </ClInclude>
+    <ClInclude Include="IToken.h">
+      <Filter>NetToken</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginDefine.h">
+      <Filter>common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="LoginServer.cpp">
+      <Filter>Login</Filter>
+    </ClCompile>
+    <ClCompile Include="Customer.cpp">
+      <Filter>NetToken\Customer</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>EntryPoint</Filter>
+    </ClCompile>
+    <ClCompile Include="DB_Connection.cpp">
+      <Filter>NetToken\DB_Connection</Filter>
+    </ClCompile>
+    <ClCompile Include="IToken.cpp">
+      <Filter>NetToken</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

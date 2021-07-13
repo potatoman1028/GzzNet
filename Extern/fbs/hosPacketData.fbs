@@ -1,0 +1,23 @@
+namespace hos.Packet;
+
+struct Vec3
+{
+    x:float;
+    y:float;
+    z:float;
+}
+
+enum MOVE_DIR:byte 
+{
+    N = 0,                                   // North
+    S,                                       // South
+    W,                                       // West
+    E,                                       // East
+    N_W,                                     // North-West
+    N_E,                                     // North-East
+    S_W,                                     // South-West
+    S_E,                                     // South-East
+    ROT_L,                                   // Rotation Left
+    ROT_R,                                   // Rotation Right
+    STOP                                     // Stop
+}

@@ -1,0 +1,9 @@
+include "hosTransformData.fbs";
+namespace hos.Data;
+table BoxColision
+{
+    transform:Transform;
+    center:Vec3;
+    size:Vec3;
+}
+root_type BoxColision;

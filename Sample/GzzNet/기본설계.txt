@@ -1,0 +1,66 @@
+오전 12:25 2020-11-02 
+김효곤
+- Socket 인터페이스 설계
+
+네트워크 통신의 흐름
+
+[서버]							[클라]
+StartUp()						StartUp()				
+Socket()						Socket()
+Bind()							Bind() 
+Listen()						Connect()
+.								.
+.								.
+.								.
+Accept()						
+Recv()							Recv()
+Send()							Send()
+.								.
+.								.
+.								.
+Disconnect()					Disconnect()
+Close()							Close()
+
+두 소켓을 어떻게 묶을까?
+
+1. 무조건 필수적으로 들어가야 하는 함수들.
+StartUp, Socket, Recv, Send, Disconnect, Close
+
+2. 서버 소켓은 기본적으로 종류가 2개
+ListenSock, AcceptSock
+
+3. 클라이언트 소켓은 1 : 1 통신
+
+4. 서버 소켓은 1 : n 통신 --> 사실 ListenSock -> 1 : n , AcceptSock -> 1 : 1
+
+5. Accept하는 시점을 Connect로 묶으면 인터페이스가 동일하게 묶인다.
+
+6. 사실 리슨소켓은 커넥트 할 필요가 없긴하다.... =========> Send(), Recv에 내가 떡칠해서 만들 수 있겠다.
+ex) Listen .. -> Recv, Accept 함수의 리턴... Send 이정도 정의
+
+7. 결론적으로 필요한 함수들
+IToken, ISet, IConnect, ISend, IReceive, IDisconnect, IClose
+
+== > Disconnect와 Close가 나눠진 이유 .
+소켓의 클로징 처리는 소켓풀에 사용가능한 소켓으로 남기겠다는 뜻.
+디스커넥트 처리는 단순 해당 소켓에 연결된 상대방을 끊겠다는 뜻.
+
+IOCP Form
+Server와 Client의 특징을 살린 IOCP Form을 만들자.
+Token Pool을 만들자. 여기서 Token은 뭐든 될 수 있다.
+Token Id Queue을 만들자. 이렇게하면 배열을 쉽게 관리할 수 있다.
+
+** 토큰의 행동을 어떻게 정의할까?
+
+Overlapped와 std::function을 활용해서 기능을 넣자.
+즉 Overlapped에 해당 토큰이 수행할 기능을 넣으면,
+해당 토큰은 인터페이스에 따라, 다형성에 따라 Recv, Send, Connect 등을 수행한다!!!
+
+Packet 설계
+
+패킷은 기본적으로 무조건 size + buffer로 사용한다. union (size, data)
+프로세스에서 패킷을 한번 더 확인한다. ex) union (size, header, data)
+물론 처리에 따라 달라질 수 있다. 이 부분은 Send와 Recv의 처리에 따라 밀접한 관련을 둔다.
+실제 Logic은 이 처리 규칙에 따라야 한다. (그렇지 않으면 통신 불가)
+
+

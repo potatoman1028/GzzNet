@@ -1,0 +1,10 @@
+namespace db.Packet;
+
+table IdPw
+{
+    session_id:int;
+    id:string;
+    pw:string;
+    uuid:int;
+}
+root_type IdPw;

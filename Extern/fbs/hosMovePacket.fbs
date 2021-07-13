@@ -1,0 +1,12 @@
+include "hosPacketData.fbs";
+namespace hos.Packet;
+
+table MoveProtocol
+{
+    id:int;
+    foward:Vec3;
+    rotation:Vec3;    
+    direction:MOVE_DIR;
+    dash:bool;
+}
+root_type MoveProtocol;
