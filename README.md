@@ -4,19 +4,19 @@
 GzzNet 라이브러리와 샘플 코드가 있습니다.
 GzzNet는 정적 라이브러리 입니다. GzzNet을 먼저 빌드하시고, SimpleClient, SimpleServer을 빌드하시면 됩니다.
 
-### How to Build
-<hr/>
+## How to Build
+### requires
+>Visual Studio 2019  
 
-Visual Studio 2019
-flatbuffer 
+#### 1. clone this repository onto your local drive
+#### 4. Build SimpleClient and SimpleServer
 
-### Explanation
-<hr/>
+# Explanation
 
-Simple Server를 먼저 실행합니다. 
-그 다음 Simple Client를 실행합니다. 
+>Simple Server를 먼저 실행합니다. 
+>그 다음 Simple Client를 실행합니다. 
 
-ini 파일의 구성은 다음과 같습니다.
+>ini 파일의 구성은 다음과 같습니다.
 
 >IP 원격지의 IP 입니다.
 >PORT 원격지의 Port 입니다.
@@ -33,5 +33,3 @@ ini 파일의 구성은 다음과 같습니다.
 >ECHO_TERM 에코 패킷을 던질 때의 간격 입니다. ms 단위입니다.
 >브로드 캐스팅은 구현 중에 있습니다.
 
-
-HEATBEAT_TIME=1000
